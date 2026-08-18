@@ -1,0 +1,132 @@
+.environment-status-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.env-section-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.env-section-header p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.environment-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.env-intelligence-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.env-intelligence-card:hover {
+  transform: translateY(-2px);
+  background-color: var(--bg-card-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.env-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.env-icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.theme-emerald .env-icon-badge {
+  background: var(--accent-emerald-glow);
+  color: var(--accent-emerald);
+}
+
+.theme-cyan .env-icon-badge {
+  background: var(--accent-cyan-glow);
+  color: var(--accent-cyan);
+}
+
+.theme-blue .env-icon-badge {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--accent-blue);
+}
+
+.theme-red .env-icon-badge {
+  background: rgba(255, 59, 48, 0.15);
+  color: var(--heat-red);
+}
+
+.env-title-box h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.env-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.env-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.env-value {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.env-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.env-status-pill {
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.env-status-pill.danger {
+  background: rgba(255, 59, 48, 0.15);
+  color: var(--heat-red);
+  border: 1px solid rgba(255, 59, 48, 0.3);
+}
+
+.env-status-pill.warning {
+  background: rgba(255, 176, 32, 0.15);
+  color: var(--warning-yellow);
+  border: 1px solid rgba(255, 176, 32, 0.3);
+}
+
+.env-status-pill.success {
+  background: var(--accent-emerald-glow);
+  color: var(--accent-emerald);
+  border: 1px solid var(--border-active);
+}

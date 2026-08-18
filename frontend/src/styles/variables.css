@@ -1,0 +1,51 @@
+:root {
+  /* Color Palette - Premium Geospatial Dark Theme */
+  --bg-dark-900: #06111F;
+  --bg-dark-800: #081827;
+  --bg-panel: #0D1B2A;
+  --bg-panel-hover: #132338;
+  --bg-card: #102235;
+  --bg-card-hover: #162B42;
+
+  /* Accents */
+  --accent-emerald: #20C997;
+  --accent-emerald-glow: rgba(32, 201, 151, 0.15);
+  --accent-cyan: #00B8D9;
+  --accent-cyan-glow: rgba(0, 184, 217, 0.15);
+  --accent-blue: #3B82F6;
+
+  /* Heat & Warning Severity Colors */
+  --heat-orange: #FF6B35;
+  --heat-red: #FF3B30;
+  --warning-yellow: #FFB020;
+  --success-green: #22C55E;
+
+  /* Typography Colors */
+  --text-primary: #F5F7FA;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-dim: rgba(245, 247, 250, 0.5);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(32, 201, 151, 0.4);
+  --border-cyan: rgba(0, 184, 217, 0.4);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-glow-emerald: 0 0 20px rgba(32, 201, 151, 0.2);
+
+  /* Spacing & Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}

@@ -1,0 +1,24 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Environment settings
+.env
+.env.local
+.env.production
+!.env.example
+
+# Django database & static files
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+
+# Logs & temp
+*.log
+.DS_Store
