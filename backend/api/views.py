@@ -144,10 +144,18 @@ def build_city_response(city, data):
 @api_view(["GET"])
 def city_analysis(request, city_name):
 
-    city = get_object_or_404(
-        City,
-        name__iexact=city_name
-    )
+    clean_name = city_name.replace("-", " ").strip()
+
+    city = City.objects.filter(
+        name__iexact=clean_name
+    ).first()
+
+    if not city:
+        city = get_object_or_404(
+            City,
+            name__icontains=clean_name
+        )
+
 
     analysis = (
         HeatAnalysis.objects

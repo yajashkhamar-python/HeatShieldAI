@@ -1,6 +1,6 @@
 import os
 from django.core.management.base import BaseCommand
-from api.models import City, HeatAnalysis, Recommendation
+from api.models import City
 from api.city_data import CITY_DATA
 
 CITIES_DATA = [
@@ -41,9 +41,7 @@ class Command(BaseCommand):
     help = "Seeds initial City records into the database idempotently."
 
     def handle(self, *args, **options):
-        self.stdout.write("Seeding city records...")
-        created_count = 0
-        updated_count = 0
+        self.stdout.write("Seeding HeatShield AI cities...")
 
         for city_info in CITIES_DATA:
             city, created = City.objects.update_or_create(
@@ -55,14 +53,14 @@ class Command(BaseCommand):
                 },
             )
             if created:
-                created_count += 1
-                self.stdout.write(self.style.SUCCESS(f"Created city: {city.name}"))
+                self.stdout.write(self.style.SUCCESS(f"{city.name}: created"))
             else:
-                updated_count += 1
-                self.stdout.write(f"Updated/Verified city: {city.name}")
+                self.stdout.write(f"{city.name}: already exists")
 
+        total_count = City.objects.count()
         self.stdout.write(
             self.style.SUCCESS(
-                f"Successfully seeded cities. Created: {created_count}, Updated/Verified: {updated_count}"
+                f"City seeding completed. Total cities: {total_count}"
             )
         )
+
